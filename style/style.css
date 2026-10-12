@@ -1,0 +1,269 @@
+:root {
+    --background: #101522;
+    --panel: #1b2335;
+    --panel-light: #252f45;
+    --yellow: #ffd45c;
+    --orange: #ff9f43;
+    --text: #f3f5fb;
+    --muted: #aab4c8;
+    --border: #35415a;
+    --danger: #ff7676;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 0%, #263957 0, transparent 40%), var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 8%;
+    border-bottom: 1px solid var(--border);
+    background: rgba(16, 21, 34, 0.9);
+}
+
+.brand {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.brand-icon {
+    margin-right: 8px;
+}
+
+.nav-label {
+    color: var(--yellow);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.container {
+    width: min(850px, 92%);
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 55px 0 35px;
+    text-align: center;
+}
+
+.duck-picture {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 145px;
+    height: 145px;
+    margin-bottom: 15px;
+    border: 2px solid #596780;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #303d54, #1b2335);
+    font-size: 5rem;
+    box-shadow: 0 15px 45px #0005;
+}
+
+.magnifier {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    font-size: 2.1rem;
+    transform: rotate(-12deg);
+}
+
+.eyebrow {
+    color: var(--yellow);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 8px 0;
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    line-height: 1.15;
+}
+
+.subtitle {
+    max-width: 600px;
+    margin: 15px auto;
+    color: var(--muted);
+}
+
+.challenge-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.challenge-info span {
+    padding: 7px 12px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--panel);
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.challenge-info strong {
+    color: var(--text);
+}
+
+.search-card,
+.clue-card {
+    margin: 20px 0;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--panel);
+    box-shadow: 0 10px 30px #0002;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.35rem;
+}
+
+.search-card>p,
+.clue-card li {
+    color: var(--muted);
+}
+
+label {
+    display: block;
+    margin: 20px 0 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    outline: none;
+    background: #111827;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: var(--yellow);
+    box-shadow: 0 0 0 3px #ffd45c22;
+}
+
+button {
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 9px;
+    background: var(--yellow);
+    color: #201b0e;
+    font-size: 0.95rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--orange);
+}
+
+.results {
+    min-height: 65px;
+    margin-top: 18px;
+    padding: 15px;
+    overflow-wrap: anywhere;
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+    background: #111827;
+}
+
+.results h3 {
+    margin-top: 0;
+    color: var(--yellow);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.flag-result {
+    padding: 12px;
+    border: 1px solid #6b9c70;
+    border-radius: 8px;
+    background: #183322;
+    color: #a6f0b0;
+    font-family: monospace;
+    overflow-wrap: anywhere;
+}
+
+.clue-card ul {
+    padding-left: 22px;
+}
+
+.clue-card li {
+    margin: 8px 0;
+}
+
+.warning {
+    margin-top: 20px;
+    padding: 12px;
+    border-left: 3px solid var(--orange);
+    background: #ff9f4310;
+    color: #ffd1a1;
+    font-size: 0.85rem;
+}
+
+footer {
+    padding: 25px 0 35px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+@media (max-width: 560px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+    .nav-label {
+        max-width: 130px;
+        text-align: right;
+        font-size: 0.6rem;
+    }
+    .hero {
+        padding-top: 35px;
+    }
+    .search-card,
+    .clue-card {
+        padding: 18px;
+    }
+    .search-row {
+        flex-direction: column;
+    }
+    .search-row button {
+        width: 100%;
+    }
+}

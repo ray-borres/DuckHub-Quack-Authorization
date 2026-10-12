@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuckHub | Quack Archive</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="brand" href="#">
+            <span class="brand-icon">🦆</span> DuckHub
+        </a>
+        <span class="nav-label">CLASSIFIED DUCK ARCHIVES</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="duck-picture" role="img" aria-label="Suspicious duck">
+                🦆
+                <span class="magnifier">🔎</span>
+            </div>
+
+            <p class="eyebrow">CYBERSURFER CTF • WEB EXPLOITATION</p>
+            <h1>Quack the Case.</h1>
+            <p class="subtitle">
+                Something suspicious is swimming in our duck archives. Find the vulnerability and uncover the hidden secret.
+            </p>
+
+            <div class="challenge-info">
+                <span>Difficulty: <strong>Medium</strong></span>
+                <span>Category: <strong>Gen.</strong></span>
+                <span>Objective: <strong>Find the flag</strong></span>
+            </div>
+        </section>
+
+        <section class="search-card">
+            <h2>🔍 Duck Archive Search</h2>
+            <p>Search the archive database for suspicious duck records.</p>
+
+            <form id="search-form">
+                <label for="duck-search">Search query</label>
+                <div class="search-row">
+                    <input id="duck-search" type="text" placeholder="Try searching for rubber ducks..." autocomplete="off">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+
+            <div id="search-results" class="results" aria-live="polite">
+                <p class="muted">No search performed yet. The ducks are waiting.</p>
+            </div>
+        </section>
+
+        <section class="clue-card">
+            <h2>📁 Investigator's Notes</h2>
+            <ul>
+                <li>The archive search may not handle input safely.</li>
+                <li>Some data has been encoded more than once.</li>
+            </ul>
+            <p class="warning">
+                Challenge environment only: test payloads on this local challenge, not on websites you do not own or have permission to test.
+            </p>
+        </section>
+
+        <footer>
+            <p>DuckHub Security Division © 2026</p>
+            <p>Stay calm and don't duck the evidence.</p>
+        </footer>
+    </main>
+</body>
+
+</html>
